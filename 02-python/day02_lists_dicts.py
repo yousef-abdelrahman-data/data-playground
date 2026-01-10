@@ -1,6 +1,15 @@
-# =====================================
-# Day 02 — Lists & Dictionaries Basics
-# =====================================
+"""
+Day 02 — Lists & Dictionaries
+Author: Yousef Abdelrahman
+
+Description:
+This script introduces core data structures in Python:
+- Lists and list operations
+- Looping through collections
+- Dictionaries and key-value access
+- Simple data evaluation logic
+"""
+
 
 # -----------------
 # Lists Basics
