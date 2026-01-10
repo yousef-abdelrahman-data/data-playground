@@ -8,9 +8,11 @@ It demonstrates how to:
 - Store structured data using a list of dictionaries
 - Iterate over records (rows)
 - Compute averages per student
-- Apply simple classification logic
+- Classify performance based on average score
+- Identify the top-performing student
 """
 
+# Dataset: list of students, each represented as a dictionary
 students = [
     {
         "name": "Yousef",
@@ -26,31 +28,39 @@ students = [
     }
 ]
 
+# Track the top student's name and highest average score
 top_student_name = ""
 top_student_average = float("-inf")
 
+# Iterate over each student (row)
 for student in students:
-    total = 0
+    total_score = 0
 
+    # Sum all scores for the current student
     for score in student["scores"]:
-        total += score
+        total_score += score
 
-    average = total / len(student["scores"])
+    # Calculate average score
+    average_score = total_score / len(student["scores"])
 
+    # Display student results
     print("\nStudent:", student["name"])
-    print("Average:", average)
+    print("Average:", average_score)
 
-    if average >= 85:
+    # Classify performance
+    if average_score >= 85:
         print("Performance: Excellent")
-    elif average >= 70:
+    elif average_score >= 70:
         print("Performance: Good")
     else:
         print("Performance: Needs Improvement")
 
-    if average > top_student_average:
-        top_student_average = average
+    # Update top student if current average is higher
+    if average_score > top_student_average:
+        top_student_average = average_score
         top_student_name = student["name"]
 
+# Final summary of the top-performing student
 print("\nTop Student Summary")
 print("Name:", top_student_name)
 print("Average Score:", top_student_average)
