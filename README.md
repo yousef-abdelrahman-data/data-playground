@@ -26,6 +26,7 @@ while progressing toward data-focused roles.
 ## 🚀 Current Status
 - Repository initialized
 - Environment setup completed
+- Environment setup completed
 - First sanity check script added (`hello_data.py`)
 
 > This repository will evolve over time as I progress and deepen my data skills.
